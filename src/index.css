@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+:root {
+    --primary: #0051FF;
+    --bg: #0c0c0c;
+    --sec: ;
+    --tri: ;
+    --ln: linear-gradient(to right, #0051FF), white;
+}
+
+@font-face {
+    font-family: 'helvetica';
+    src: url(../public/fonts/Helvetica.ttf);
+}
+
+* {
+    font-family: 'helvetica';
+}
+
+html,
+body {
+    background: var(--bg);
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: -10px -10px 5px rgb(255, 255, 255);
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover);
+}
