@@ -1,10 +1,14 @@
 import React from "react";
 import Title from "../../../components/Title";
+import Button from "../../../components/Button";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { IoCheckmarkDone } from "react-icons/io5";
 
 const About = () => {
   const contents = [
     {
       name: "mission",
+      isOpen: false,
       dets: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       lists: [
         "Thada bhai Joginder, main thada bhai Joginder.",
@@ -16,6 +20,7 @@ const About = () => {
     },
     {
       name: "vision",
+      isOpen: true,
       dets: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
       lists: [
         "Thada bhai Joginder, main thada bhai Joginder.",
@@ -26,6 +31,7 @@ const About = () => {
       ],
     },
   ];
+
   return (
     <>
       <section className="w-full h-full py-14 px-2 md:px-[5%]">
@@ -36,7 +42,7 @@ const About = () => {
               <div className="about_img relative w-6/7 h-100 mx-auto rounded-2xl bg-linear-to-b from-(--primary) to-transparent content-end">
                 <img
                   src="https://res.cloudinary.com/dozupkvv3/image/upload/v1777359901/undraw_work-chat_kw8x_1_jn0irq.svg"
-                  className="mx-auto"
+                  className="mx-auto duration-150 ease-in"
                   alt=""
                 />
               </div>
@@ -50,17 +56,25 @@ const About = () => {
                   Vision
                 </button>
               </div>
-              <div className="w-full py-2">
+              <div className="w-full">
                 {contents.map((content, index) => (
-                  <div key={index} id={`${content.name}`}>
+                  <div
+                    className={content.isOpen ? "block my-8" : "hidden"}
+                    key={index}
+                    id={`${content.name}`}
+                  >
                     <p>{content.dets}</p>
-                    <ul>
+                    <ul className="mt-4">
                       {content.lists.map((li, index) => (
-                        <li>{li}</li>
+                        <li className="flex items-center gap-2 opacity-70">
+                          <IoCheckmarkDone className="text-(--primary)" />
+                          {li}
+                        </li>
                       ))}
                     </ul>
                   </div>
                 ))}
+                <Button name="Explore" icon=<FaArrowRightLong /> />
               </div>
             </article>
           </div>
