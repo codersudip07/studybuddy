@@ -11,11 +11,11 @@ const Counter = () => {
       <section id="counter" className="w-full h-50 content-center px-2 md:px-[5%]">
         <figure className="container mx-auto flex items-center justify-center">
           {counter.map((item, index) => (
-            <div key={index} className="text-center w-1/4">
-              <h3 className="md:text-6xl font-bold bg-clip-text bg-linear-to-t from-(--primary) to-white text-transparent">
+            <div key={index} className="text-center md:w-1/4">
+              <h3 className="md:text-6xl text-3xl font-bold bg-clip-text bg-linear-to-t from-(--primary) to-white text-transparent">
                 {item.count}+
               </h3>
-              <p className="capitalize">{item.title}</p>
+              <p className="capitalize ">{item.title}</p>
             </div>
           ))}
         </figure>

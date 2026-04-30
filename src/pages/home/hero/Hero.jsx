@@ -6,7 +6,7 @@ const Hero = () => {
     <>
       <section id="hero" className="relative w-full h-full pt-14">
         <figure
-          className="container mx-auto h-full content-center bg-no-repeat bg-center px-2 md:px-[5%]"
+          className="container mx-auto h-full content-center bg-no-repeat bg-center px-4 md:px-[5%]"
           style={{
             backgroundImage: `url(${"https://res.cloudinary.com/dozupkvv3/image/upload/v1777318318/bg-lines_h4hkpj.svg"})`,
           }}
