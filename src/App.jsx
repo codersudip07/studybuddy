@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './pages/home/hero/Hero';
 import Counter from './components/Counter';
 import About from './pages/home/about/About';
+import Notes from './pages/home/latest-notes/Notes';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Hero />
         <Counter />
         <About />
+        <Notes />
       </main>
     </>
   );

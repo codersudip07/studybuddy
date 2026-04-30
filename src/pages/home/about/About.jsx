@@ -36,7 +36,7 @@ const About = () => {
     <>
       <section className="w-full h-full py-14 px-2 md:px-[5%]">
         <figure className="conatiner mx-auto">
-          <Title text="What is Study" highlight="Buddy" />
+          <Title text="What is Study" highlight="Buddy" text2="?" />
           <div className="w-full mt-14 flex items-center justify-between">
             <aside className="w-1/2">
               <div className="about_img relative w-6/7 h-100 mx-auto rounded-2xl bg-linear-to-b from-(--primary) to-transparent content-end">
