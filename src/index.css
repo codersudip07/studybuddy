@@ -22,6 +22,7 @@ body {
     background: var(--bg);
     color: white;
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 /* width */
@@ -45,4 +46,23 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--hover);
+}
+
+
+/* --------- */
+.pyq {
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.1) 30%, var(--primary) 50%, rgba(255, 255, 255, 0.1) 70%, transparent 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowSlide 10s linear infinite;
+}
+
+@keyframes glowSlide {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -00% 0;
+    }
 }

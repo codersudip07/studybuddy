@@ -5,6 +5,7 @@ import Hero from './pages/home/hero/Hero';
 import Counter from './components/Counter';
 import About from './pages/home/about/About';
 import Notes from './pages/home/latest-notes/Notes';
+import PYQ from './pages/home/pyq/PYQ';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Counter />
         <About />
         <Notes />
+        <PYQ />
       </main>
     </>
   );
