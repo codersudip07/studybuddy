@@ -21,7 +21,7 @@ const PYQ = () => {
   }, [selectedYear, selectedStream]);
   return (
     <>
-      <section className="w-full h-fit py-14 px-4 md:px-[5%]">
+      <section className="w-full h-fit md:w-full py-20 md:mb-5 px-4 md:px-[5%]">
         <figure className="container mx-auto">
           <h2 className="pyq text-center text-6xl md:text-9xl font-black leading-none">
             P . Y . Q

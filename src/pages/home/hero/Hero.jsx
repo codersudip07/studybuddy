@@ -4,7 +4,7 @@ import Button from "../../../components/Button";
 const Hero = () => {
   return (
     <>
-      <section id="hero" className="relative w-full h-full pt-14">
+      <section id="hero" className="relative w-full h-screen pt-14">
         <figure
           className="container mx-auto h-full content-center bg-no-repeat bg-center px-4 md:px-[5%]"
           style={{
