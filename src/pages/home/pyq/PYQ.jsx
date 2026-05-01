@@ -10,7 +10,6 @@ const PYQ = () => {
   const [showAll, setShowAll] = useState(false);
   const filteredData = pyq.filter((item) => {
     const yearMatch = selectedYear === "ALL" || item.year === selectedYear;
-
     const streamMatch =
       selectedStream === "ALL" || item.stream === selectedStream;
 
