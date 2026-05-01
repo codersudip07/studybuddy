@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Dropdown from "../../../components/Dropdown";
-import { pyq, years, streams } from "../../../contexts/pyq/pyqs";
+import { pyq, years, streams } from "../../../contexts/pyqs";
 import { FaArrowRightLong, FaEye } from "react-icons/fa6";
 import Button from "../../../components/Button";
 
