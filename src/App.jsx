@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Hero from './pages/home/hero/Hero';
 import Counter from './components/Counter';
 import About from './pages/home/about/About';
-import Notes from './pages/home/latest-notes/Notes';
+import Notes from './pages/home/notes/Notes';
 import PYQ from './pages/home/pyq/PYQ';
 
 const App = () => {
