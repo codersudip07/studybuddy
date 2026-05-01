@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Dropdown from "../../../components/Dropdown";
 import { pyq, years, streams } from "../../../contexts/PYQ/PYQs";
-import { FaEye } from "react-icons/fa6";
+import { FaArrowRightLong, FaEye } from "react-icons/fa6";
+import Button from "../../../components/Button";
 
 const PYQ = () => {
   const [selectedYear, setSelectedYear] = useState("ALL");
@@ -21,7 +22,7 @@ const PYQ = () => {
   }, [selectedYear, selectedStream]);
   return (
     <>
-      <section className="w-full h-full py-14 px-4 md:px-[5%]">
+      <section className="w-full h-fit py-14 px-4 md:px-[5%]">
         <figure className="container mx-auto">
           <h2 className="pyq text-center text-6xl md:text-9xl font-black leading-none">
             P . Y . Q
@@ -60,15 +61,12 @@ const PYQ = () => {
 
               {/* Show All Button */}
               {filteredData.length > 15 && (
-                <div className="text-center mt-6">
-                  <button
-                    onClick={() => setShowAll(!showAll)}
-                    className="px-6 py-2 rounded-md border border-(--primary) 
-      hover:bg-(--primary) hover:text-white transition cursor-pointer"
-                  >
-                    {showAll ? "Show Less" : "Show All"}
-                  </button>
-                </div>
+                <Button
+                  onclick={() => setShowAll(!showAll)}
+                  name={showAll ? "Show less" : "Show all"}
+                  icon={<FaArrowRightLong />}
+                  style="my-6 mx-auto"
+                />
               )}
             </div>
           </div>

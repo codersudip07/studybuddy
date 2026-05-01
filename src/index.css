@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'helvetica';
-    src: url(../public/fonts/Helvetica.ttf);
+    src: url(../fonts/Helvetica.ttf);
 }
 
 * {
@@ -22,7 +22,7 @@ body {
     background: var(--bg);
     color: white;
     scroll-behavior: smooth;
-    user-select: none;
+    /* user-select: none; */
 }
 
 /* width */
@@ -62,7 +62,14 @@ body {
     0% {
         background-position: 100% 0;
     }
+
     100% {
         background-position: -00% 0;
     }
 }
+
+.achiever-img {
+    clip-path: polygon(100% 0%, 80% 50%, 100% 100%, 20% 100%, 0% 50%, 20% 0%);
+    rotate: -85deg;
+}
+

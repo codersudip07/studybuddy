@@ -11,7 +11,7 @@ const Hero = () => {
             backgroundImage: `url(${"https://res.cloudinary.com/dozupkvv3/image/upload/v1777318318/bg-lines_h4hkpj.svg"})`,
           }}
         >
-          <h1 className="font-bold text-3xl text-center md:tracking-tighter md:text-5xl">
+          <h1 className="font-bold text-4xl text-center leading-none md:tracking-tighter md:text-5xl">
             Welcome to Your <br className="md:hidden" />
             <b className="h-fit border-transparent inline-block my-4 md:my-0 hover:-rotate-6 hover:p-3 hover:bg-(--primary)/20 hover:border hover:border-white hover:mr-1 hover:cursor-crosshair duration-150 ease-in-out">
               Study<span className="text-(--primary)">Buddy</span>
@@ -26,7 +26,7 @@ const Hero = () => {
           </p>
           <Button name="Get Started" style="mx-auto" />
         </figure>
-        <div className="absolute top-0 w-full h-full pointer-events-none">
+        <div className="absolute top-0 w-full h-screen pointer-events-none">
           <div className="circle w-50 h-50 rounded-full bg-linear-to-r from-(--primary) to-white blur-[90px]"></div>
           <div className="absolute bottom-0 w-full h-120">
             <img

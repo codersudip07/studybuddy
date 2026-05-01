@@ -41,7 +41,8 @@ const About = () => {
               <div className="about_img relative md:w-6/7 h-60 md:h-100 mx-auto rounded-2xl bg-linear-to-b from-(--primary) to-transparent content-end">
                 <img
                   src="https://res.cloudinary.com/dozupkvv3/image/upload/v1777359901/undraw_work-chat_kw8x_1_jn0irq.svg"
-                  className="mx-auto duration-150 ease-in"
+                  className="mx-auto w-2/3 h-full duration-150 ease-in"
+                  loading="lazy"
                   alt=""
                 />
               </div>
