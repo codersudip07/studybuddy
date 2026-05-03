@@ -1,16 +1,16 @@
 import { useState, useRef, useEffect } from "react";
 import { RxDoubleArrowDown } from "react-icons/rx";
 
-export default function Dropdown({ options, preset, onSelect, style }) {
+export default function Dropdown({ options, preset, onSelect, style, outerStyle }) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(preset);
   const ref = useRef();
 
-   const handleSelect = (item) => {
-     setSelected(item);
-     setOpen(false);
-     if (onSelect) onSelect(item);
-   };
+  const handleSelect = (item) => {
+    setSelected(item);
+    setOpen(false);
+    if (onSelect) onSelect(item);
+  };
 
 
   // 👇 outside click close
@@ -29,7 +29,7 @@ export default function Dropdown({ options, preset, onSelect, style }) {
   }, [preset]);
 
   return (
-    <div ref={ref} className="relative md:w-40">
+    <div ref={ref} className={`relative md:w-40 ${outerStyle}`}>
       {/* Selected */}
       <div
         onClick={() => setOpen(!open)}
@@ -37,9 +37,8 @@ export default function Dropdown({ options, preset, onSelect, style }) {
       >
         {selected}
         <span
-          className={`transition-transform duration-300  ${
-            open ? "rotate-180" : ""
-          }`}
+          className={`transition-transform duration-300  ${open ? "rotate-180" : ""
+            }`}
         >
           <RxDoubleArrowDown className="md:text-lg" />
         </span>
@@ -47,9 +46,8 @@ export default function Dropdown({ options, preset, onSelect, style }) {
 
       {/* Dropdown List */}
       <div
-        className={`absolute w-fit md:w-full bg-white/5 backdrop-blur-md rounded-md  shadow-lg border border-white/10 transition-all duration-300 ${style} ${
-          open ? "max-h-fit opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`absolute w-fit md:w-full bg-white/5 backdrop-blur-md rounded-md  shadow-lg border border-white/10 transition-all duration-300 ${style} ${open ? "max-h-fit opacity-100" : "max-h-0 opacity-0 hidden"
+          }`}
       >
         {options.map((item, index) => (
           <div
