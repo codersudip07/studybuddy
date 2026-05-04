@@ -37,8 +37,8 @@ const About = () => {
         <figure className="conatiner mx-auto">
           <Title text="What is Study" highlight="Buddy" text2="?" />
           <div className="w-full mt-14 flex flex-col items-center justify-between md:flex-row">
-            <aside className="md:w-1/2">
-              <div className="about_img relative md:w-6/7 h-60 md:h-100 mx-auto rounded-2xl bg-linear-to-b from-(--primary) to-transparent content-end">
+            <aside className="md:w-1/2 md:pr-22">
+              <div className="about_img relative md:max-w-140 h-60 md:h-100 rounded-2xl bg-linear-to-b from-(--primary) to-transparent float-end content-end z-10">
                 <img
                   src="https://res.cloudinary.com/dozupkvv3/image/upload/v1777359901/undraw_work-chat_kw8x_1_jn0irq.svg"
                   className="mx-auto w-2/3 h-full duration-150 ease-in"
@@ -65,7 +65,7 @@ const About = () => {
                   Vision
                 </button>
               </div>
-              <div className="md:w-6/7">
+              <div>
                 {contents.map((content, index) => (
                   <div
                     className={
