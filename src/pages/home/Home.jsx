@@ -8,6 +8,7 @@ const About = lazy(() => import("./about/About"));
 const Notes = lazy(() => import("./notes/Notes"));
 const PYQ = lazy(() => import("./pyq/PYQ"));
 const Achiever = lazy(() => import("./achiever/Achiever"));
+const FAQ = lazy(() => import("./faq/FAQ"));
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
           <Notes />
           <PYQ />
           <Achiever />
+          <FAQ />
           <Testimonials />
         </main>
       </Suspense>
