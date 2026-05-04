@@ -72,6 +72,10 @@
 
 /* Testimonials */
 .swiper-slide {
+    height: 200px !important;
+}
+
+.swiper-slide {
     opacity: 0.6;
     transform: scale(0.9);
     transition: 0.3s;
