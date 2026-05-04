@@ -18,19 +18,19 @@ const Achiever = () => {
     }];
   return (
     <>
-      <section className="w-full h-fit md:h-full py-25 md:py-14 px-4 md:px-[5%] md:content-end">
+      <section className="w-full h-fit md:h-full py-20 md:py-14 px-4 md:px-[5%] md:content-center">
         <figure className="container mx-auto flex flex-col gap-15 md:gap-0 md:flex-row justify-between">
           <aside className="relative md:w-1/2 h-full">
-            <h3 className="font-bold absolute -top-25 md:-top-40">
+            <h3 className="font-bold absolute -top-20">
               <span className="text-3xl">#1</span> Notes Provider of The Month
             </h3>
-            <div className="relative w-80 h-70 md:w-140 md:h-full md:max-h-120 mx-auto">
-              <div className="achiever-img absolute inset-0 bg-white blur-3xl scale-105 -z-10"></div>
-              <div className="achiever-img relative w-full h-full bg-linear-to-r from-(--primary) to-white z-10 overflow-hidden">
+            <div className="relative w-full h-70 md:w-140 md:h-130 md:max-h-140 mx-auto">
+              <div className="achiever-img absolute inset-0 bg-white blur-3xl scale-105 bg-linear-to-l from-(--primary) to-whit "></div>
+              <div className="achiever-img relative w-full h-full pt-4 md:pt-8 bg-linear-to-r from-(--primary) to-white z-10 overflow-hidden">
                 <img
                   src="https://res.cloudinary.com/dozupkvv3/image/upload/v1777617066/babanchod-img_iemr0p.png"
-                  className="rotate-85 h-full object-center"
-                  loading='lazy'
+                  className="w-5/7 md:w-full h-full md:object-contain object-center mx-auto"
+                  loading="lazy"
                   alt=""
                 />
               </div>
@@ -50,7 +50,7 @@ const Achiever = () => {
                   />
                 </div>
                 <div className="flex items-center gap-2">
-                  <b className='text-sm'>{dets.followers} Followers</b>{" "}
+                  <b className="text-sm">{dets.followers} Followers</b>{" "}
                   <span className="flex items-center text-sm leading-none gap-1 p-1 px-2 rounded-sm text-yellow-300 bg-(--primary)/30">
                     <FaStar /> {dets.ratings}
                   </span>
@@ -84,8 +84,8 @@ const Achiever = () => {
             ))}
             <img
               src="https://res.cloudinary.com/dozupkvv3/image/upload/v1777633211/graphic_rcfuru.svg"
-              className='mt-15'
-              loading='lazy'
+              className="mt-15"
+              loading="lazy"
               alt=""
             />
           </article>

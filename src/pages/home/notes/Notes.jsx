@@ -34,87 +34,105 @@ const Notes = () => {
 
   return (
     <>
-      <section id="notes" className='w-full h-full py-14 px-4 md:px-[5%]'>
-        <figure className='container mx-auto'>
+      <section id="notes" className="w-full h-full py-14 px-4 md:px-[5%]">
+        <figure className="container mx-auto">
           {/* Title */}
-          <Title text="Some " highlight=" Latest " text2=" Notes For You" highlightStyle="h-fit border inline-block my-4 md:my-0 border-(--primary) bg-(--primary)/20 py-1 px-3" />
+          <Title
+            text="Some "
+            highlight=" Latest "
+            text2=" Notes For You"
+            highlightStyle="h-fit border inline-block my-4 md:my-0 border-(--primary) bg-(--primary)/20 py-1 px-3"
+          />
           {/*Filter bar*/}
-          <div
+          {/* <div
             id="filter-bar"
-            className='w-full mt-8 flex flex-col-reverse md:items-center justify-evenly md:flex-row md:gap-0 gap-2'
+            className="w-full flex flex-col-reverse md:items-center justify-evenly md:justify-center md:flex-row md:gap-0 gap-2"
+          > */}
+          <div
+            id="select-section"
+            className="w-full  flex flex-col-reverse justify-evenly items-center md:flex-row  my-10 text-white gap-2 md:gap-10"
           >
-            <div id="select-section" className='md:w-3/5 w-full flex md:justify-around items-center  justify-center md:items-start md:flex-row text-white gap-2 md:gap-0'>
-              {/* Subject Selection */}
-              <Dropdown
-                options={["Select Subject", ...subject]}
-                preset="Select Subject"
-                onSelect={setSelectSub}
-                outerStyle="md:w-80 w-full z-1"
-              />
-              <Dropdown
-                options={["Select Author", ...author]}
-                preset="Select Author"
-                onSelect={setSelectAuthor}
-                outerStyle="md:w-80 w-full z-1"
-              />
-            </div>
+            {/* Subject Selection */}
+            <Dropdown
+              options={["Select Subject", ...subject]}
+              preset="Select Subject"
+              onSelect={setSelectSub}
+              outerStyle="md:w-80 w-full z-1"
+            />
+            <Dropdown
+              options={["Select Author", ...author]}
+              preset="Select Author"
+              onSelect={setSelectAuthor}
+              outerStyle="md:w-80 w-full z-1"
+            />
             <div
-              id='search-toggle'
-              className='md:w-2/5 my-3 flex items-center justify-between gap-2 md:gap-5'
+              id="search-toggle"
+              className="md:w-fit flex gap-2 items-center"
             >
               {/* Search Bar*/}
               <input
-                type='text'
+                type="text" 
                 placeholder="Search..."
                 onChange={handelSearch}
-                className='md:w-px[200] w-80 h-12 px-4 py-3 text-[18px] rounded border-none outline-none bg-white text-black'
+                className="md:w-80 w-60 h-10 px-4 py-3 md:text-xl  rounded border-none outline-none bg-white text-black"
                 value={search}
               />
               {/* Toggle Button*/}
-              <div id="toggle-section" className='flex gap-1.5 md:gap-0'>
+              <div id="toggle-section" className="flex gap-1.5 md:gap-2">
                 <span
                   className={`text-lg hidden font-semibold transition-colors duration-300 md:block ${isPaid ? "text-white" : "text-zinc-500"}`}
-                >Paid</span>
+                >
+                  Paid
+                </span>
                 <button
                   onClick={() => setIsPaid(!isPaid)}
-                  className={`relative cursor-pointer w-20 md:w-14 h-7 rounded-full transition-all flex justify-center items-center duration-300 ${isPaid ? "bg-green-600" : "bg-zinc-600 "
-                    }`}
+                  className={`relative cursor-pointer w-20 md:w-14 h-7 rounded-full transition-all flex justify-center items-center duration-300 ${
+                    isPaid ? "bg-green-600" : "bg-zinc-600 "
+                  }`}
                   role="switch"
                   aria-checked={isPaid}
                 >
-                  <span className={`md:hidden h-full flex items-center justify-center absolute text-white text-xs font-semibold transition-all duration-300 ${isPaid ? "right-2.5" : "left-1.5"
-                    }`}>
+                  <span
+                    className={`md:hidden h-full flex items-center justify-center absolute text-white text-xs font-semibold transition-all duration-300 ${
+                      isPaid ? "right-2.5" : "left-1.5"
+                    }`}
+                  >
                     {isPaid ? "PAID" : "UNPAID"}
                   </span>
                   <span
                     className={`absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ${isPaid ? "translate-x-0" : "translate-x-13 md:translate-x-7"} flex justify-center items-center`}
                   >
-                    {isPaid ? <FaIndianRupeeSign className="w-4 h-4 text-green-600" /> : ""}
+                    {isPaid ? (
+                      <FaIndianRupeeSign className="w-4 h-4 text-green-600" />
+                    ) : (
+                      ""
+                    )}
                   </span>
                 </button>
                 <span
                   className={`hidden text-lg font-semibold transition-colors duration-300 md:block ${!isPaid ? "text-white" : "text-zinc-500"}`}
-                >Unpaid</span>
+                >
+                  Unpaid
+                </span>
               </div>
             </div>
           </div>
+          {/* </div> */}
           {/* Latest Notes */}
-          <div id="notesCard"
-            className=' overflow-x-auto scrollbar-hidden h-full '
+          <div
+            id="notesCard"
+            className="overflow-x-auto scrollbar-hidden h-full"
           >
-            <div className='flex flex-col md:flex-row w-full gap-3 md:gap-0 md:w-full justify-evenly px-3 py-5'>
+            <div className="flex flex-col md:flex-row w-full gap-3 justify-evenly md:py-5">
               {topNotes.map((content, idx) => (
-                <Card
-                  key={idx}
-                  item={content}
-                />
+                <Card key={idx} item={content} />
               ))}
             </div>
           </div>
         </figure>
       </section>
     </>
-  )
+  );
 }
 
 export default Notes

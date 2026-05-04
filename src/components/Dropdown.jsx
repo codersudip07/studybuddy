@@ -33,7 +33,7 @@ export default function Dropdown({ options, preset, onSelect, style, outerStyle 
       {/* Selected */}
       <div
         onClick={() => setOpen(!open)}
-        className="border-l-4 border-(--primary) w-fit p-2 md:px-4 md:w-full text-sm md:text-xl font-bold cursor-pointer flex justify-between items-center gap-2 md:gap-0 bg-white/5 backdrop-blur-md rounded-md"
+        className="border-l-4 border-(--primary) w-full p-2 md:px-4 text-sm md:text-xl font-bold cursor-pointer flex justify-between items-center gap-2 md:gap-0 bg-white/5 backdrop-blur-md rounded-md"
       >
         {selected}
         <span
@@ -46,14 +46,14 @@ export default function Dropdown({ options, preset, onSelect, style, outerStyle 
 
       {/* Dropdown List */}
       <div
-        className={`absolute w-fit md:w-full bg-white/5 backdrop-blur-md rounded-md  shadow-lg border border-white/10 transition-all duration-300 ${style} ${open ? "max-h-fit opacity-100" : "max-h-0 opacity-0 hidden"
+        className={`absolute w-full bg-white/5 backdrop-blur-md rounded-md  shadow-lg border border-white/10 transition-all duration-300 ${style} ${open ? "max-h-fit opacity-100" : "max-h-0 opacity-0 hidden"
           }`}
       >
         {options.map((item, index) => (
           <div
             key={index}
             onClick={() => handleSelect(item)}
-            className="px-6 py-2 md:px-2 hover:bg-(--primary) hover:text-white cursor-pointer transition"
+            className="px-6 py-2 md:px-2 hover:bg-(--primary) hover:text-white cursor-pointer"
           >
             {item}
           </div>
