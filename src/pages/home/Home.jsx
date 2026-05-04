@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import Loader from "../../components/Loader";
+import Testimonials from "../../components/Testimonials";
 
 const Hero = lazy(() => import("./hero/Hero"));
 const Counter = lazy(() => import("../../components/Counter"));
@@ -19,6 +20,7 @@ const Home = () => {
           <Notes />
           <PYQ />
           <Achiever />
+          <Testimonials />
         </main>
       </Suspense>
     </>
