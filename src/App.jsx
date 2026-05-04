@@ -7,6 +7,7 @@ import About from './pages/home/about/About';
 import Notes from './pages/home/notes/Notes';
 import PYQ from './pages/home/pyq/PYQ';
 import Achiever from './pages/home/achiever/Achiever';
+import FAQ from './pages/home/faq/FAQ';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Notes />
         <PYQ />
         <Achiever />
+        <FAQ />
       </main>
     </>
   );
