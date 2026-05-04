@@ -46,7 +46,7 @@ export default function Dropdown({ options, preset, onSelect, style, outerStyle 
 
       {/* Dropdown List */}
       <div
-        className={`absolute w-full bg-white/5 backdrop-blur-md rounded-md  shadow-lg border border-white/10 transition-all duration-300 ${style} ${open ? "max-h-fit opacity-100" : "max-h-0 opacity-0 hidden"
+        className={`absolute md:w-full text-center bg-white/5 backdrop-blur-md rounded-md  shadow-lg border border-white/10 transition-all duration-300 ${style} ${open ? "max-h-fit opacity-100" : "max-h-0 opacity-0 hidden"
           }`}
       >
         {options.map((item, index) => (

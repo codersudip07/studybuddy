@@ -58,12 +58,14 @@ const Notes = () => {
               preset="Select Subject"
               onSelect={setSelectSub}
               outerStyle="md:w-80 w-full z-1"
+              style="w-full"
             />
             <Dropdown
               options={["Select Author", ...author]}
               preset="Select Author"
               onSelect={setSelectAuthor}
               outerStyle="md:w-80 w-full z-1"
+              style="w-full"
             />
             <div
               id="search-toggle"
